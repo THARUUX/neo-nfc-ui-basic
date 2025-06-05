@@ -83,7 +83,10 @@
         const name = "Neo Creative";
         const phone = "+94768251160";
         const email = "info@neo.lk";
-        const org = "Neo"; // Optional: Organization name
+        const org = "Neo";
+        const address = "44, Udahamulla Station Road, Gangodawila, Nugegoda";
+        const website = "https://www.neo.lk";
+        const photoURL = "https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/365398950_277294201661929_5206428018041785759_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_8GxQwt-uHgQ7kNvwFynJHt&_nc_oc=AdnMWr_3uv5n7OAgBbb-CAxut3FtBGEYhbzU1D-Z6gF2M3rzj8Qi6t1wUI8SZTr8Ims&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=-xXlpKc4chjlTiFWOCxD4Q&oh=00_AfPRu-2vhxm1qlrwOlT1i2am8TbqdNsRVKZZDp1FpvvCyg&oe=68474A64";
 
         if (!name || !phone) {
             alert("Name and phone number are required.");
@@ -91,17 +94,16 @@
         }
 
         const vcard = `BEGIN:VCARD
-        VERSION:3.0
-        FN:Neo Creative
-        ORG:NEO Creative
-        TEL;TYPE=CELL:+94768261160
-        EMAIL;TYPE=INTERNET:info@neo.lk
-        URL:https://www.neo.lk
-        ADR;TYPE=WORK:;;44, Udahamulla Station Road, Gangodawila, Nugegoda;;;; 
-        NOTE:Digital Section
-        PHOTO;VALUE=URI:https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/365398950_277294201661929_5206428018041785759_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_8GxQwt-uHgQ7kNvwFynJHt&_nc_oc=AdnMWr_3uv5n7OAgBbb-CAxut3FtBGEYhbzU1D-Z6gF2M3rzj8Qi6t1wUI8SZTr8Ims&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=-xXlpKc4chjlTiFWOCxD4Q&oh=00_AfPRu-2vhxm1qlrwOlT1i2am8TbqdNsRVKZZDp1FpvvCyg&oe=68474A64
-        END:VCARD
-        `;
+VERSION:3.0
+FN:${name}
+ORG:${org}
+TEL;TYPE=CELL:${phone}
+EMAIL;TYPE=INTERNET:${email}
+URL:${website}
+ADR;TYPE=WORK:;;${address};;;;
+NOTE:Digital Section
+PHOTO;VALUE=URI:${photoURL}
+END:VCARD`;
 
         const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
         const link = document.createElement('a');
@@ -112,6 +114,7 @@
         document.body.removeChild(link);
     }
 </script>
+
 
 </body>
 </html>
