@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Creative</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+        .font-pri {
+        font-family: "Bruno Ace", sans-serif !important;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .button {
+        background: #f1f5f9;
+        cursor: pointer;
+        border: 0px solid #e8e8e8;
+        transition: all 0.3s;
+        box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+        }
+
+        button:active {
+        color: #666;
+        box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-screen h-screen flex justify-center bg-slate-100">
+        <div class="w-full max-w-[1800px] flex justify-center">
+            <div class=" w-full sm:w-1/2 flex flex-col p-5 gap-5 items-center">
+
+                <div class="w-full flex justify-center items-center pt-16 z-10">
+                    <img src="Assets/logo.png" class="w-48 h-auto" alt="">
+                </div>
+
+                <div class="flex flex-col w-full gap-5 sm:gap-10 pt-20 grow">
+                    <div onclick="generateVCard()" class="bg-white w-full rounded-full flex justify-center items-center py-3 text-sm sm:text-2xl font-pri shadow-lg cursor-pointer hover:scale-101 duration-300 relative group"> <span class="bg-lime-500 absolute w-0 h-full duration-300 rounded-full opacity-0 hover:opacity-100 group-hover:w-full group-hover:h-full"></span> <div class="z-10 group-hover:text-white duration-300 text-slate-400">Contact</div></div>
+                    <a href="https://www.neo.lk" class="bg-white w-full rounded-full flex justify-center items-center py-3 text-sm sm:text-2xl font-pri shadow-lg cursor-pointer hover:scale-101 duration-300 relative group"> <span class="bg-lime-500 absolute w-0 h-full duration-300 rounded-full opacity-0 hover:opacity-100 group-hover:w-full group-hover:h-full"></span> <div class="z-10 group-hover:text-white duration-300 text-slate-400">Website</div></a>
+                    <a href="https://www.neo.lk" class="bg-white w-full rounded-full flex justify-center items-center py-3 text-sm sm:text-2xl font-pri shadow-lg cursor-pointer hover:scale-101 duration-300 relative group"> <span class="bg-lime-500 absolute w-0 h-full duration-300 rounded-full opacity-0 hover:opacity-100 group-hover:w-full group-hover:h-full"></span> <div class="z-10 group-hover:text-white duration-300 text-slate-400">Online Store</div></a>
+                    <a href="mailto:info@neo.lk" class="bg-white w-full rounded-full flex justify-center items-center py-3 text-sm sm:text-2xl font-pri shadow-lg cursor-pointer hover:scale-101 duration-300 relative group"> <span class="bg-lime-500 absolute w-0 h-full duration-300 rounded-full opacity-0 hover:opacity-100 group-hover:w-full group-hover:h-full"></span> <div class="z-10 group-hover:text-white duration-300 text-slate-400">Email</div></a>
+                </div>
+
+                <div class="flex gap-5 sm:gap-10 mb-10  mt-3">
+                    <a href="https://www.facebook.com/NEOGraphics.lk" class="flex justify-center items-center hover:scale-105 duration-300 relative" title="Facebook">
+                        <svg width="31" height="32" viewBox="0 0 31 32" fill="#90a1b9" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31 16.0401C31 7.18596 24.056 0 15.5 0C6.944 0 0 7.18596 0 16.0401C0 23.8035 5.332 30.2677 12.4 31.7594V20.8521H9.3V16.0401H12.4V12.0301C12.4 8.93434 14.8335 6.41604 17.825 6.41604H21.7V11.2281H18.6C17.7475 11.2281 17.05 11.9499 17.05 12.8321V16.0401H21.7V20.8521H17.05V32C24.8775 31.198 31 24.3649 31 16.0401Z" fill="#90a1b9" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/neo.lk" class="flex justify-center items-center hover:scale-105 duration-300 relative" title="Instagram">
+                        <svg width="31" height="31" viewBox="0 0 31 31" fill="#90a1b9" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.99 0H22.01C26.97 0 31 4.03 31 8.99V22.01C31 24.3943 30.0528 26.6809 28.3669 28.3669C26.6809 30.0528 24.3943 31 22.01 31H8.99C4.03 31 0 26.97 0 22.01V8.99C0 6.6057 0.947158 4.31906 2.63311 2.63311C4.31906 0.947158 6.6057 0 8.99 0ZM8.68 3.1C7.20009 3.1 5.7808 3.68789 4.73434 4.73434C3.68789 5.7808 3.1 7.20009 3.1 8.68V22.32C3.1 25.4045 5.5955 27.9 8.68 27.9H22.32C23.7999 27.9 25.2192 27.3121 26.2657 26.2657C27.3121 25.2192 27.9 23.7999 27.9 22.32V8.68C27.9 5.5955 25.4045 3.1 22.32 3.1H8.68ZM23.6375 5.425C24.1514 5.425 24.6442 5.62913 25.0075 5.99248C25.3709 6.35583 25.575 6.84864 25.575 7.3625C25.575 7.87636 25.3709 8.36917 25.0075 8.73252C24.6442 9.09587 24.1514 9.3 23.6375 9.3C23.1236 9.3 22.6308 9.09587 22.2675 8.73252C21.9041 8.36917 21.7 7.87636 21.7 7.3625C21.7 6.84864 21.9041 6.35583 22.2675 5.99248C22.6308 5.62913 23.1236 5.425 23.6375 5.425ZM15.5 7.75C17.5554 7.75 19.5267 8.56652 20.9801 10.0199C22.4335 11.4733 23.25 13.4446 23.25 15.5C23.25 17.5554 22.4335 19.5267 20.9801 20.9801C19.5267 22.4335 17.5554 23.25 15.5 23.25C13.4446 23.25 11.4733 22.4335 10.0199 20.9801C8.56652 19.5267 7.75 17.5554 7.75 15.5C7.75 13.4446 8.56652 11.4733 10.0199 10.0199C11.4733 8.56652 13.4446 7.75 15.5 7.75ZM15.5 10.85C14.2667 10.85 13.084 11.3399 12.212 12.212C11.3399 13.084 10.85 14.2667 10.85 15.5C10.85 16.7333 11.3399 17.916 12.212 18.788C13.084 19.6601 14.2667 20.15 15.5 20.15C16.7333 20.15 17.916 19.6601 18.788 18.788C19.6601 17.916 20.15 16.7333 20.15 15.5C20.15 14.2667 19.6601 13.084 18.788 12.212C17.916 11.3399 16.7333 10.85 15.5 10.85Z" fill="#90a1b9" />
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/94768261160" class="flex justify-center items-center hover:scale-105 duration-300 relative" title="Whatsapp">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="#90a1b9" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30.1623 7.77417C28.7105 6.30817 26.9814 5.14578 25.0758 4.35474C23.1703 3.5637 21.1263 3.15983 19.0631 3.16667C10.4181 3.16667 3.37227 10.2125 3.37227 18.8575C3.37227 21.6283 4.10061 24.32 5.46227 26.695L3.24561 34.8333L11.5581 32.6483C13.8539 33.8992 16.4348 34.5642 19.0631 34.5642C27.7081 34.5642 34.7539 27.5183 34.7539 18.8733C34.7539 14.6775 33.1231 10.735 30.1623 7.77417ZM19.0631 31.9042C16.7198 31.9042 14.4239 31.2708 12.4131 30.0833L11.9381 29.7983L6.99811 31.0967L8.31227 26.2833L7.99561 25.7925C6.69339 23.7137 6.00207 21.3105 6.00061 18.8575C6.00061 11.6692 11.8589 5.81083 19.0473 5.81083C22.5306 5.81083 25.8081 7.1725 28.2623 9.6425C29.4777 10.852 30.4408 12.2907 31.0958 13.8753C31.7509 15.4598 32.0848 17.1587 32.0781 18.8733C32.1098 26.0617 26.2514 31.9042 19.0631 31.9042ZM26.2198 22.1508C25.8239 21.9608 23.8923 21.0108 23.5439 20.8683C23.1798 20.7417 22.9264 20.6783 22.6573 21.0583C22.3881 21.4542 21.6439 22.3408 21.4223 22.5942C21.2006 22.8633 20.9631 22.895 20.5673 22.6892C20.1714 22.4992 18.9048 22.0717 17.4164 20.7417C16.2448 19.6967 15.4689 18.4142 15.2314 18.0183C15.0098 17.6225 15.1998 17.4167 15.4056 17.2108C15.5798 17.0367 15.8014 16.7517 15.9914 16.53C16.1814 16.3083 16.2606 16.1342 16.3873 15.8808C16.5139 15.6117 16.4506 15.39 16.3556 15.2C16.2606 15.01 15.4689 13.0783 15.1523 12.2867C14.8356 11.5267 14.5031 11.6217 14.2656 11.6058H13.5056C13.2364 11.6058 12.8248 11.7008 12.4606 12.0967C12.1123 12.4925 11.0989 13.4425 11.0989 15.3742C11.0989 17.3058 12.5081 19.1742 12.6981 19.4275C12.8881 19.6967 15.4689 23.655 19.3956 25.3492C20.3298 25.7608 21.0581 25.9983 21.6281 26.1725C22.5623 26.4733 23.4173 26.4258 24.0981 26.3308C24.8581 26.22 26.4256 25.3808 26.7423 24.4625C27.0748 23.5442 27.0748 22.7683 26.9639 22.5942C26.8531 22.42 26.6156 22.3408 26.2198 22.1508Z" fill="#90a1b9" />
+                        </svg>
+                    </a>
+                    <a href="" class="flex justify-center items-center hover:scale-105 duration-300 relative" title="LinkedIn">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="#90a1b9" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30.0833 4.75C30.9232 4.75 31.7286 5.08363 32.3225 5.6775C32.9164 6.27136 33.25 7.07681 33.25 7.91667V30.0833C33.25 30.9232 32.9164 31.7286 32.3225 32.3225C31.7286 32.9164 30.9232 33.25 30.0833 33.25H7.91667C7.07681 33.25 6.27136 32.9164 5.6775 32.3225C5.08363 31.7286 4.75 30.9232 4.75 30.0833V7.91667C4.75 7.07681 5.08363 6.27136 5.6775 5.6775C6.27136 5.08363 7.07681 4.75 7.91667 4.75H30.0833ZM29.2917 29.2917V20.9C29.2917 19.531 28.7479 18.2182 27.7798 17.2502C26.8118 16.2822 25.499 15.7383 24.13 15.7383C22.7842 15.7383 21.2167 16.5617 20.4567 17.7967V16.0392H16.0392V29.2917H20.4567V21.4858C20.4567 20.2667 21.4383 19.2692 22.6575 19.2692C23.2454 19.2692 23.8092 19.5027 24.2249 19.9184C24.6406 20.3341 24.8742 20.8979 24.8742 21.4858V29.2917H29.2917ZM10.8933 13.5533C11.5988 13.5533 12.2754 13.2731 12.7742 12.7742C13.2731 12.2754 13.5533 11.5988 13.5533 10.8933C13.5533 9.42083 12.3658 8.2175 10.8933 8.2175C10.1837 8.2175 9.50305 8.49942 9.00123 9.00123C8.49942 9.50305 8.2175 10.1837 8.2175 10.8933C8.2175 12.3658 9.42083 13.5533 10.8933 13.5533ZM13.0942 29.2917V16.0392H8.70833V29.2917H13.0942Z" fill="#90a1b9" />
+                        </svg>
+                    </a>
+                    <a href="" class="flex justify-center items-center hover:scale-105 duration-300 relative" title="Github">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="#90a1b9" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.9998 3.16667C16.9206 3.16667 14.8617 3.57621 12.9407 4.37191C11.0197 5.16761 9.27424 6.33388 7.80398 7.80414C4.83465 10.7735 3.1665 14.8007 3.1665 19C3.1665 25.9983 7.71067 31.9358 13.9965 34.0417C14.7882 34.1683 15.0415 33.6775 15.0415 33.25V30.5742C10.6557 31.5242 9.7215 28.4525 9.7215 28.4525C8.99317 26.6158 7.964 26.125 7.964 26.125C6.52317 25.1433 8.07484 25.175 8.07484 25.175C9.65817 25.2858 10.4973 26.8058 10.4973 26.8058C11.8748 29.2125 14.2023 28.5 15.1048 28.12C15.2473 27.0908 15.659 26.3942 16.1023 25.9983C12.5873 25.6025 8.89817 24.2408 8.89817 18.2083C8.89817 16.4508 9.49984 15.0417 10.529 13.9175C10.3707 13.5217 9.8165 11.875 10.6873 9.7375C10.6873 9.7375 12.0173 9.31 15.0415 11.3525C16.2923 11.0042 17.654 10.83 18.9998 10.83C20.3457 10.83 21.7073 11.0042 22.9582 11.3525C25.9823 9.31 27.3123 9.7375 27.3123 9.7375C28.1832 11.875 27.629 13.5217 27.4707 13.9175C28.4998 15.0417 29.1015 16.4508 29.1015 18.2083C29.1015 24.2567 25.3965 25.5867 21.8657 25.9825C22.4357 26.4733 22.9582 27.4392 22.9582 28.9117V33.25C22.9582 33.6775 23.2115 34.1842 24.019 34.0417C30.3048 31.92 34.8332 25.9983 34.8332 19C34.8332 16.9207 34.4236 14.8618 33.6279 12.9408C32.8322 11.0199 31.666 9.2744 30.1957 7.80414C28.7254 6.33388 26.98 5.16761 25.059 4.37191C23.138 3.57621 21.0791 3.16667 18.9998 3.16667Z" fill="#90a1b9" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function generateVCard() {
+        const name = "Neo Creative";
+        const phone = "+94768251160";
+        const email = "info@neo.lk";
+        const org = "Neo"; // Optional: Organization name
+
+        if (!name || !phone) {
+            alert("Name and phone number are required.");
+            return;
+        }
+
+        const vcard = `BEGIN:VCARD
+        VERSION:3.0
+        FN:Neo Creative
+        ORG:NEO Creative
+        TEL;TYPE=CELL:+94768261160
+        EMAIL;TYPE=INTERNET:info@neo.lk
+        URL:https://www.neo.lk
+        ADR;TYPE=WORK:;;44, Udahamulla Station Road, Gangodawila, Nugegoda;;;; 
+        NOTE:Digital Section
+        PHOTO;VALUE=URI:https://scontent-sin11-2.xx.fbcdn.net/v/t39.30808-6/365398950_277294201661929_5206428018041785759_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_8GxQwt-uHgQ7kNvwFynJHt&_nc_oc=AdnMWr_3uv5n7OAgBbb-CAxut3FtBGEYhbzU1D-Z6gF2M3rzj8Qi6t1wUI8SZTr8Ims&_nc_zt=23&_nc_ht=scontent-sin11-2.xx&_nc_gid=-xXlpKc4chjlTiFWOCxD4Q&oh=00_AfPRu-2vhxm1qlrwOlT1i2am8TbqdNsRVKZZDp1FpvvCyg&oe=68474A64
+        END:VCARD
+        `;
+
+        const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = `${name.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_')}.vcf`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+</body>
+</html>
